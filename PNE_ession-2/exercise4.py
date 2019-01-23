@@ -1,0 +1,10 @@
+sequence=input("introduce a sequence: ")
+sequence=sequence.lower()
+
+lenght=len(sequence)
+print("the lenght of the sequence is: ",lenght)
+counter_a=sequence.count("a")
+counter_c=sequence.count("c")
+counter_t=sequence.count("t")
+counter_g=sequence.count("g")
+print("the counter of a: ", counter_a,"the counter of c: ", counter_c, "the counter of g: ", counter_g,"the counter of t: ",counter_t)
