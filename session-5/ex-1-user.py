@@ -9,9 +9,10 @@ def count_a(seq):
     return result
 
 
+
 # Main program
 
-s = "AGTACACTGGT"
+s = input("Introduce a sequence")
 na = count_a(s)
 print("The are {} As in the sequence".format(na))
 
