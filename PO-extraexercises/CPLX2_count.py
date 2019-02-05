@@ -1,4 +1,5 @@
 with open("CPLX2.txt","r") as f:
+
     counter_a = 0
     counter_c =0
     counter_t = 0
