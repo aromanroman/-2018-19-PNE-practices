@@ -1,6 +1,7 @@
 class Seq:
-    def __init__(self,strbase):
-        self.strbase=strbase
+    def __init__(self, strbase):
+        self.strbase = strbase
+
     def len(self):
         return len(self.strbase)
 
@@ -15,7 +16,9 @@ class Seq:
                 complement_list.append("C")
             elif n == "C":
                 complement_list.append("G")
-        return ','.join (complement_list).replace(",","")
+        element1 = ','.join(complement_list).replace(",", "")
+        element1_1 = Seq(element1)
+        return element1_1.strbase
 
     def reverse(self):
         reverse_list = []
@@ -23,7 +26,9 @@ class Seq:
         while n >= 0:
             reverse_list.append(self.strbase[n])
             n -= 1
-        return ','.join (reverse_list).replace(",","")
+        element2 = ','.join(reverse_list).replace(",", "")
+        element2_1 = Seq(element2)
+        return element2_1.strbase
 
     def count(self, base):
         self.base = base.upper()
@@ -31,12 +36,6 @@ class Seq:
 
     def perc(self, base):
         self.base = base.upper()
-        return round(100.0 * self.count(base) / self.len(), 1)
-
-
-seq1= Seq("AGTCA")
-print(seq1.len())
-print(seq1.complement())
-print(seq1.reverse())
-print(seq1.count("a"))
-print(seq1.perc("t"))
+        element3 = round(100.0 * self.count(base) / self.len(), 1)
+        element3_1 = Seq(element3)
+        return element3_1.strbase
